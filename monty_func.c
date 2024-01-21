@@ -75,7 +75,7 @@ void _pint(stack_t **stack, unsigned int line_number)
 	fprintf(stdout, "%d\n", tmp->n);
 }
 /**
- * _swap - swap item at top of stack 
+ * _swap - swap item at top of stack
  * @stack: pointer to the head of linked list stack
  * @line_number: number of line opcode occurs on
  *

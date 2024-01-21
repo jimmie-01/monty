@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * _add - adds the items at the top of stack to the next 
+ * _add - adds the items at the top of stack to the next
  *
  * @stack: pointer to linked list stack
  * @line_number: number of line opcode occurs on

@@ -1,4 +1,5 @@
 #include "monty.h"
+
 int flags = 0;
 /**
  * main - driver function
@@ -13,7 +14,7 @@ int main(int ac, char **av)
 	stack = NULL;
 	if (ac != 2)
 	{
-		fprintf(stderr,"USAGE: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		error_exit(&stack);
 	}
 	read_file(av[1], &stack);
