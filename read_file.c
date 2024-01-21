@@ -29,7 +29,7 @@ void read_file(char *filename, stack_t **stack)
 			line_count++;
 			continue;
 		}
-		str = get_op_func(line);
+		str = get_func(line);
 		if (str == NULL)
 		{
 			fprintf(stderr, "L%d: unknown instruction %s\n", line_count, line);

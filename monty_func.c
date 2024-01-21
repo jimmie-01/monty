@@ -31,12 +31,12 @@ void _push(stack_t **stack, unsigned int line_number)
 
 	if (flags == 1)
 	{
-		add_dnodeint_end(stack, push_arg);
+		add_at_end(stack, push_arg);
 	}
 
 	if (flags == 0)
 	{
-		add_dnodeint(stack, push_arg);
+		add_at_beg(stack, push_arg);
 	}
 
 }
@@ -72,7 +72,7 @@ void _pint(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 		error_exit(stack);
 	}
-	printf("%d\n", tmp->n);
+	fprintf(stdout, "%d\n", tmp->n);
 }
 /**
  * _swap - swap item at top of stack 
@@ -83,7 +83,7 @@ void _pint(stack_t **stack, unsigned int line_number)
 void _swap(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp;
-	int tmp;
+	int num;
 
 	tmp = *stack;
 	if (tmp == NULL || tmp->next == NULL)
@@ -91,9 +91,9 @@ void _swap(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		error_exit(stack);
 	}
-	tmp = tmp->n;
+	num = tmp->n;
 	tmp->n = tmp->next->n;
-	tmp->next->n = tmp;
+	tmp->next->n = num;
 }
 /**
  * _pop - delete item at top of stack
